@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showroom Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Showroom Management System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#showrooms" onclick="showSection('showrooms')">Showrooms</a></li>
+            <li><a href="#vehicles" onclick="showSection('vehicles')">Vehicles</a></li>
+            <li><a href="#sales" onclick="showSection('sales')">Sales</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="showrooms" class="section">
+            <h2>Showrooms</h2>
+            <div id="showroom-list">
+                <p>Address: <input type="text" id="showroom-address"></p>
+                <p>Manager Name: <input type="text" id="showroom-manager"></p>
+            </div>
+            <button onclick="submitShowroom()">Submit Showroom</button>
+        </section>
+        <section id="vehicles" class="section" style="display:none;">
+            <h2>Vehicles</h2>
+            <div id="vehicle-list">
+                <p>Name: <input type="text" id="vehicle-cost"></p>
+                <p>Type: <input type="text" id="vehicle-type"></p>
+                <p>Colour: <input type="text" id="vehicle-colour"></p>
+            </div>
+            <button onclick="submitVehicle()">Submit Vehicle</button>
+        </section>
+        <section id="sales" class="section" style="display:none;">
+            <h2>Sales</h2>
+            <div id="sale-list">
+                <h3>Sales Details</h3>
+                <p>Total sale in a month: 50</p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
