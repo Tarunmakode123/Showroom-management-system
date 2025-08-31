@@ -59,4 +59,19 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleBtn.textContent = '🌙 Dark Mode';
     }
   });
+
+  // Show/Hide Sales Details logic
+  const toggleSalesBtn = document.getElementById('toggleSalesDetailsBtn');
+  const saleList = document.getElementById('sale-list');
+  if (toggleSalesBtn && saleList) {
+    toggleSalesBtn.addEventListener('click', function() {
+      if (saleList.style.display === 'none') {
+        saleList.style.display = '';
+        toggleSalesBtn.textContent = 'Hide Sales Details';
+      } else {
+        saleList.style.display = 'none';
+        toggleSalesBtn.textContent = 'Show Sales Details';
+      }
+    });
+  }
 });
